@@ -1,0 +1,15 @@
+.App {
+  border: 2px solid black;
+  border-radius: 5px;
+  margin: 60px 60px;
+}
+
+.App header {
+  font-size: 46px;
+  margin: 20px 0;
+}
+
+.App footer {
+  font-size: 12px;
+  margin: 20px 0;
+}
