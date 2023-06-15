@@ -9,14 +9,14 @@ export default function Dictionary() {
     event.preventDefault();
     //alert(`Searching for ${keyword} definition`);
 
-    let apiKey = `980ta46f70b3b386c063344ca8aof7b9`;
-    let apiUrl = `https://api.shecodes.io/dictionary/v1/define?word=${keyword}&key=${apiKey}`;
+    let apiUrl = `https://api.dictionaryapi.dev/api/v2/entries/en/${keyword}`;
     console.log(apiUrl);
     axios.get(apiUrl).then(handleResponse);
   }
 
   function handleResponse(response) {
-    console.log(response.data);
+    console.log(response.data[0]);
+    console.log(response.data[0].meanings[0].definitions[0].definition)
   }
 
   function handleKeyWordChange(event) {
