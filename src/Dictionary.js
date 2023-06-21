@@ -17,12 +17,12 @@ export default function Dictionary(props) {
   function handleSubmit(event) {
     event.preventDefault();
     //alert(`Searching for ${keyword} definition`);
+    search();
   }
 
   function handleResponse(response) {
     //console.log(response.data[0]);
     setResults(response.data[0]);
-    search();
   }
 
   function handleKeyWordChange(event) {
@@ -36,26 +36,24 @@ export default function Dictionary(props) {
   }
 
   if (loaded) {
-  return (
-    <div className="Dictionary">
-      <section>
-        <form onSubmit={handleSubmit}>
-          <input
-            type="search"
-            autoFocus={true}
-            onChange={handleKeyWordChange}
-            placeholder="Search for a word..."
-            className="Search-field"
-          />
-        </form>
-        <div className="hint">Suggested words: sunset, bike, book...</div>
-      </section>
-      <Results results={results} />
-    </div>
-  );
+    return (
+      <div className="Dictionary">
+        <section>
+          <h1>What word do you want to look up?</h1>
+          <form onSubmit={handleSubmit}>
+            <input
+              type="search"
+              onChange={handleKeyWordChange}
+              defaultValue={props.defaultKeyword}
+            />
+          </form>
+          <div className="hint">Suggested words: sunset, bike, book...</div>
+        </section>
+        <Results results={results} />
+      </div>
+    );
   } else {
     load();
     return "Loading...";
   }
-
 }
