@@ -30,8 +30,12 @@ export default function App() {
             </a>
           </div>
           <div>
-            <a href="https://www.freepik.com/free-vector/flat-colorful-books-plants-stand-bookshelf_37476481.htm#page=2&query=book%20shelf&position=9&from_view=keyword&track=ais">
-              Image by redgreystock
+            <a
+              href="https://www.freepik.com/free-vector/flat-colorful-books-plants-stand-bookshelf_37476481.htm#page=2&query=book%20shelf&position=9&from_view=keyword&track=ais"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Top page image by redgreystock
             </a>{" "}
             on Freepik
           </div>
