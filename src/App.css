@@ -7,9 +7,10 @@ a {
 }
 
 .App {
+  max-width: 960px;
+  margin: 60px auto;
   border: 2px solid #ddd;
   border-radius: 8px;
-  margin: 60px 60px;
 }
 
 .App header {
